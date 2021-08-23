@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Flamenco:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+:root{
+    --primaryCol:#ffae3d;
+    --greyCol: #6e6e6e;
+    --fontOne: "Dancing Script";
+    --fontTwo: "Quicksand";
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Flamenco, cursive;
+}
+html{
+    font-size: 10px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+#preloader{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: #fff url('./resources/preLoading.gif') no-repeat center;
+    background-size: 20%;
+    z-index: 9999999;
+}
+button{
+    outline: none;
+}
+.unSelectable{
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.main-body-content{
+    width: 100%;
+    height: 100vh;
+    margin: 0rem;
+    overflow: scroll;
+}
+/*pagess*/
+.mainPages{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.pageHeading{
+    text-align: center;
+    font-family: var(--fontOne);
+    color: var(--primaryCol);
+    font-size: 4rem;
+    font-weight: 550;
+    margin-top: calc(8vh + 5px);
+    margin-bottom: 10px;
+}
+.pageSubHeading{
+    text-align: center;
+    font-family: var(--fontTwo);
+    font-size: 2.5rem;
+    font-weight: 550;
+    color: var(--primaryCol);
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+/*End of pages*/
+.loginScreen, .newAccoutScreen{
+    width: 100%;
+    height: 100vh;
+    background: url('./resources/UI_background.png');
+    background-size: cover;
+    position: relative;
+}
+.loginCard,.accountCard{
+    padding: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-20%,-50%);
+    width: 40rem;
+    height: auto;
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 3rem 0 #333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.authLogo img{
+    width: 6rem;
+    height: 6rem;
+}
+.loginWelcome{
+    font-family: Dancing Script;
+    font-size: 4rem;
+    color: var(--primaryCol);
+}
+.authTopic{
+    font-size: 2.5rem;
+    color: var(--greyCol);
+}
+.inputContener{
+    width: 100%;
+    padding: 1rem 0rem;
+}
+.inputLayout{
+    width: 100%;
+    padding: 1rem 2rem;
+    margin:  1rem 0rem;
+    border: .2rem solid var(--greyCol);
+    border-radius: 1rem;
+}
+::placeholder{
+    color: var(--primaryCol);
+    font-size: 2.5rem;
+}
+.inputBox, button{
+    margin-left: 2rem;
+    width: 25rem;
+    height: auto;
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--primaryCol);
+}
+i{
+    color: var(--primaryCol);
+    font-size: 1.8rem;
+}
+.forgetPass{
+    width: 100%;
+    font-size: 2.5rem;
+    text-align: right;
+    margin:  1rem 0rem;
+}
+.loginBtn{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    margin:  2rem 0rem;
+    font-size: 2.5rem;
+    color: white;
+    background-color: var(--primaryCol);
+    border-radius: 1rem;
+}
+.link{
+    width: 100%;
+    font-size: 2.5rem;
+    text-align: center;
+    margin:  1rem 0rem;
+}
+/*Navigation bar*/
+.nav_bar{
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    box-shadow: 0 0 10px 0 rgb(219, 219, 219);
+    z-index: 999;
+}
+.nav_bar_ul{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    list-style: none;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 0rem 10rem;
+}
+.nav_bar_li a{
+    font-size: 2.5rem;
+    color: var(--greyCol);
+    line-height: 8vh;
+}
+.nav_logo a img{
+    width: 6rem;
+    height: 6rem;
+}
+.nav_bar_li a:hover{
+    color: var(--primaryCol);
+    text-decoration: underline;
+}
+.sm_screen_nav{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    display: none;
+}
+.activeLI{
+    position: absolute;
+    bottom: 0;
+    width: 10rem;
+    height: 6px;
+    border-radius: 2px;
+    background: var(--primaryCol);
+    z-index: 99;
+    transition: all .5s ease;
+}
+.activeLI::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid var(--primaryCol);
+}
+.sm_screen_logo{
+    width: fit-content;
+    height: fit-content;
+}
+.sm_screen_logo a img{
+    width: 50px;
+    height: 50px;
+}
+.hamburger{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-left: auto;
+    display: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.hamburger_icon{
+    width: 25px;
+    height: 3px;
+    background-color: var(--primaryCol);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.hamburger_icon::before, .hamburger_icon::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primaryCol);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.hamburger_icon::before{
+    transform: translateY(-8px);
+}
+.hamburger_icon::after{
+    transform: translateY(8px);
+}
+/*hamburger animation*/
+.hamburger.open .hamburger_icon{
+    background: transparent;
+}
+.hamburger.open .hamburger_icon::before{
+    transform: rotate(45deg);
+}
+.hamburger.open .hamburger_icon::after{
+    transform: rotate(-45deg);
+}
+/*Start Home*/
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.homeLogo img{
+    width: 25rem;
+    height: 25rem;
+}
+.homeContent{
+    width: auto;
+    height: auto;
+}
+.welcomePara{
+    width: auto;
+    height: auto;
+}
+.welcomePara p{
+    font-family: var(--fontOne);
+    text-align: center;
+}
+.homeWelcome{
+    font-size: 5rem;
+    color: var(--primaryCol);
+}
+.homeTo{
+    font-size: 2.8rem;
+    color: var(--greyCol);
+}
+.homeIncredibles{
+    font-size: 4rem;
+    color: var(--greyCol);
+}
+.homeTagLine{
+    width: auto;
+    font-size: 2.8rem;
+    font-family: var(--fontTwo);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    line-height: 8rem;
+    color: var(--greyCol);
+}
+.webBtn{
+    position: relative;
+    width: 24rem;
+    height: 5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    z-index: 1;
+}
+.webBtn::before{
+    content: '';
+    position: absolute;
+    width: 24rem;
+    height: 5rem;
+    background-color: var(--primaryCol);
+    border-radius: 10px;
+    z-index: -1;
+    transition: -webkit-clip-path, clip-path 800ms ease-in-out;
+    -webkit-clip-path: circle(150% at 0 50%);
+    clip-path: circle(150% at 0 50%);
+}
+.webBtn:hover::before,.webBtn:focus::before{
+    -webkit-clip-path: circle(0% at 0 50%);
+    clip-path: circle(0% at 0 50%);
+}
+.webBtn p{
+    font-size: 2.5rem;
+    font-family: var(--fontTwo);
+    font-weight: 550;
+    color: white;
+}
+.webBtn i{
+    color: white;
+    font-size: 2rem;
+    padding: 0 10px;
+}
+.webBtn:hover, .webBtn:focus{
+    background-color: transparent;
+    border: 3px solid var(--primaryCol);
+}
+.webBtn:hover p, .webBtn:hover i, .webBtn:focus p, .webBtn:focus i{
+    color: var(--primaryCol);
+}
+/*End Home*/
+
+/*Start of Time Table*/
+    .tableOne, .tableTwo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    table tr{
+        width: auto;
+        height: 3.5rem;
+        text-align: center;
+    }
+    .tableHeadingRow{
+        background-color: var(--primaryCol);
+        color: white;
+    }
+    table tr th, table tr td, table tr td a{
+        font-size: 2.4rem;
+        font-family: var(--fontTwo);
+        font-weight: normal;
+    }
+    table tr th, table tr td{
+        width: auto;
+        min-width: 20rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    table tr td, table tr td a{
+        color: var(--greyCol);
+    }
+    .tableTwo table tr td a{
+        user-select: all;
+        -webkit-user-select: all;
+        -ms-user-select: all;
+    }
+/*End of Time Table*/
+/*Start of Card*/
+.allCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card,.tutCard{
+    width: 300px;
+    height: 160px;
+    overflow: hidden;
+    margin: 20px 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+.card{
+    position: relative;
+    background-color: white;
+    color: var(--primaryCol);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px 0 rgb(224, 224, 224);
+    transition: color 200ms ease-in-out;
+    z-index: 1;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 160px;
+    background-color: var(--primaryCol);
+    transition: -webkit-clip-path, clip-path 800ms ease-in-out;
+    -webkit-clip-path: circle(10% at 0 0);
+    clip-path: circle(10% at 0 0);
+    z-index: -1;
+}
+.card:hover{
+    color: white;
+}
+.card:hover::before, .card:focus::before{
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+}
+.cardHeading{
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.cardDescription{
+    width: 100%;
+    height: 100px;
+    font-size: 1.8rem;
+    text-align: center;
+    overflow: hidden;
+    font-family: var(--fontTwo);
+}
+.notes .webBtn, .assignment .webBtn{
+    margin-top: 4rem;
+}
+/*End of Card*/
+/*Start of Tutorial*/
+.tutCard{
+    height: 180px;
+    border: 3px solid var(--greyCol);
+    padding: unset;
+}
+.tutCard .cardHeading{
+    border-radius: 10px;
+    line-height: 3.6rem;
+    height: 3.6rem;
+    width: 100%;
+    font-size: 2.6rem;
+    color: white;
+    background-color: var(--primaryCol);
+}
+.tut_ul{
+    width: 100%;
+    list-style: none;
+    padding: 8px 25px;
+    overflow-y: visible;
+}
+.tut_link a{
+    color: var(--greyCol);
+    font-family: var(--fontTwo);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-weight: 550;
+    line-height: 2.4rem;
+    text-decoration: underline;
+    transition: all .5s ease;
+}
+.tut_link a:hover{
+    color: var(--primaryCol);
+    font-weight: 600;
+}
+/*End of Tutorial*/
+
+/*Start of download*/
+.download{
+    justify-content: flex-start;
+    position: relative;
+}
+    /*Start of Slides*/
+.download .downloadPoster{
+    width: 1000px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background: rgb(44, 44, 44);
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgb(200, 200, 200);
+    margin-top: 25px;
+}
+.downloadPoster .posterSlide{
+    z-index: 1;
+    position: absolute;
+    clip-path: circle(0% at 0 50%);
+    width: 100%;
+    height: 100%;
+}
+.downloadPoster .posterSlide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: clip-path 1.5s ease;
+}
+.downloadPoster .posterSlide img{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.slideControllers{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 2;
+}
+.slideControllers .controlBtn{
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--greyCol);
+}
+.slideControllers .controlBtn:hover, .slideControllers .controlBtn.active{
+    background: var(--primaryCol);
+    box-shadow: 0 0 10px 0 var(--greyCol);
+}
+    /*End of Slides*/
+
+.mobile, .mobile2{
+    position: absolute;
+    top: 40%;
+    width: 180px;
+    z-index: 3;
+}
+.mobile{
+    left: 8%;
+    transform: rotate(-3deg);
+    animation: mobileAni .8s infinite alternate;
+}
+.mobile img, .mobile2 img{
+    width: 100%;
+}
+.mobile2{
+    right: 8%; 
+    transform: rotate(3deg);
+    animation: mobileAni .8s infinite alternate-reverse;
+}
+@keyframes mobileAni{
+    0%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        transform: rotate(3deg);
+    }
+}
+
+.downloadDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 20%;
+    z-index: 99;
+    color: var(--primaryCol);
+    text-align: center;
+}
+.downloadDiv .downloadTitle{
+    width: auto;
+    font-size: 1.8rem;
+    font-family: var(--fontTwo);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--greyCol);
+}
+.downloadLink{
+    width: 25rem;
+    height: 6rem;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px 0 rgb(207, 207, 207);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: var(--primaryCol);
+    z-index: 1;
+
+}
+.downloadLink::before{
+    content: '';
+    position: absolute;
+    width: 25rem;
+    height: 6rem;
+    border-radius: 10px;
+    background-color: var(--primaryCol);
+    z-index: -1;
+    transition: -webkit-clip-path, clip-path 800ms ease-in-out;
+    -webkit-clip-path: circle(0% at 0 50%);
+    clip-path: circle(0% at 0 50%);
+}
+.downloadLink:hover,.downloadLink:focus{
+    color: white;
+}
+.downloadLink:hover::before, .downloadLink:focus::before{
+    -webkit-clip-path: circle(150% at 0 50%);
+    clip-path: circle(150% at 0 50%);
+}
+/*End of download*/
+
+.fullscreenNote{
+    width: 100%;
+    padding: 30px;
+    font-size: 3rem;
+    font-family: var(--fontTwo);
+    color: var(--greyCol);
+    text-align: center;
+}
+
+/*Footer*/
+.footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.footer p{
+    font-family: var(--fontTwo);
+    color: var(--primaryCol);
+    padding: 20px;
+    font-size: 14px;
+}
+/*End of Footer*/
+/*media qurey*/
+@media screen and (max-width: 1400px){
+    .mobile{
+        left: 2%;
+    }
+    .mobile2{
+        right: 2%;
+    }
+}
+@media screen and (max-width: 1020px){
+    .mobile{
+        top: 35%;
+        left: 5%;
+    }
+    .mobile2{
+        top: 40%;
+        right: 5%;
+    }
+    .mobile img, .mobile2 img{
+        width: 120px;
+    }
+    .download{
+        width: 100vw;
+    }
+    .download .downloadPoster, .downloadPoster .posterSlide, .downloadPoster .posterSlide img{
+        width: 100vw;
+        height: calc(100vw*0.4);
+    }
+
+}
+@media screen and (max-width: 850px){
+    .nav_bar_ul{
+        padding: 0rem 2rem;
+    }
+    .slideControllers .controlBtn{
+        width: 6px;
+        height: 6px;
+        margin: 6px;
+    }
+}
+@media screen and (max-width: 950px){
+    .tableOne, .tableTwo{
+        width: 100%;
+        overflow: scroll;
+        justify-content: start;
+    }
+    .mobile, .mobile2{
+        top: 25%;
+    }
+    .mobile, .mobile2, .mobile img, .mobile2 img{
+        width: 100px;
+    }
+    
+}
+@media screen and (max-width: 650px){/*hamburger code*/
+    html{
+        font-size: 8px;
+    }
+    .nav_bar_ul{
+        padding: 0rem 2rem;
+        display: none;
+    }
+    .nav_bar{
+        height: auto;
+    }
+    .activeLI{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav_bar_ul.sm_nav_open{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        justify-content: space-evenly;
+        height: calc(100vh - 8vh);
+    }
+    .sm_screen_nav{
+        display: flex;
+    }
+    .bg_screen_logo{
+        display: none;
+    }
+    /*Start of Home screen*/
+    .homeLogo img{
+        width: 15rem;
+        height: 15rem;
+    }
+    .homeTagLine{
+        width: auto;
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        line-height: 8rem;
+    }
+    /*End of Home screen*/
+    .pageHeading{
+        margin-top: calc(50px + 5px);
+    }
+    /*Start of Time Table*/
+    /*End of Time Table*/
+    /*Start of Notes*/
+    .notes, .assignment, .tutorial{
+        width: 100%;
+        height: auto;
+    }
+    .tutCard{
+        height: 150px;
+    }
+    /*End of Notes*/
+    /*download*/
+    .downloadDiv{
+        bottom: 15%;
+    }
+}

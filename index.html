@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredibles</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./resources/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body onload="preLoaderFun()">
+    <div id="preloader"></div>
+    <div class="main-body-content">
+        
+        <!--Start--><!--nav Bar-->
+        <nav class="nav_bar unSelectable">
+            <div class="sm_screen_nav">
+                <div class="nav_logo sm_screen_logo">
+                    <a data-page="home" href="#home"><img src="./resources/logo.png" alt=""></a>
+                </div>
+                <div class="hamburger">
+                    <div class="hamburger_icon">
+                    </div>
+                </div>
+            </div>
+            <ul class="nav_bar_ul">
+                <li class="nav_bar_li"><a data-page="download" href="#download">Download</a></li>
+                <li class="nav_bar_li"><a data-page="timeTable" href="#timeTable">Time Table</a></li>
+                <li class="nav_bar_li"><a data-page="notes" href="#notes">Notes</a></li>
+                <li class="nav_logo bg_screen_logo">
+                    <a data-page="home" href="#home"><img src="./resources/logo.png" alt=""></a>
+                </li>
+                <li class="nav_bar_li"><a data-page="assignment" href="#assignment">Assignment</a></li>
+                <li class="nav_bar_li"><a data-page="tutorial" href="#tutorial">Tutorials</a></li>
+                <li class="nav_bar_li"><a data-page="other" href="#other">Other</a></li>
+                <div class="activeLI"></div>
+            </ul>
+            
+        </nav>
+        <!--End--><!--nav Bar-->
+
+
+        <!--Start--><!--Landing-->
+        <section data-index="0" id="home" class="home unSelectable mainPages keyPage">
+            <div class="homeLogo">
+                <img src="./resources/logo.png" alt="Incredibles">
+            </div>
+            <div class="homeContent">
+                <div class="welcomePara">
+                    <p class="homeWelcome">Welcome</p>
+                    <p class="homeTo">To</p>
+                    <p class="homeIncredibles">Incredibles</p>
+                </div>
+                <p class="homeTagLine">
+                    Every thing at one place
+                </p>
+            </div>
+            <a href="#" class="btn webBtn">
+                <p>More</p><i class="fas fa-long-arrow-alt-right"></i>
+            </a>
+        </section>
+        <!--End--><!--Landing-->
+
+        <!--Start--><!--Download-->
+        <section data-index="1" id="download" class="download mainPages unSelectable keyPage">
+            <div class="downloadPoster">
+                <div class="posterSlide  active">
+                    <img src="./Posters/Poster 1.png" alt="Poster">
+                </div>
+                <div class="posterSlide">
+                    <img src="./Posters/Poster 2.1.png" alt="Poster">
+                </div>
+                <div class="posterSlide">
+                    <img src="./Posters/Poster 3.png" alt="Poster">
+                </div>
+                <div class="posterSlide">
+                    <img src="./Posters/Poster 4.png" alt="Poster">
+                </div>
+                <div class="slideControllers">
+                    <div class="controlBtn active"></div>
+                    <div class="controlBtn"></div>
+                    <div class="controlBtn"></div>
+                    <div class="controlBtn"></div>
+                </div>
+            </div>
+            <div class="mobile">
+                <img src="./Posters/phoneMockup.png" alt="phoneMockup">
+            </div>
+            <div class="mobile2">
+                <img src="./Posters/phoneMockup.png" alt="phoneMockup">
+            </div>
+            <div class="downloadDiv">
+                <p class="downloadTitle">Download Latest Version of Incredibles.</p>
+                <a href="./resources/Incredibles.apk" class="downloadLink" download="Incredibles">Download</a>
+            </div>
+        </section>
+        <!--End--><!--Download-->
+        <!--Start--><!--Time Table-->
+        <section data-index="2" id="timeTable" class="timeTable mainPages unSelectable keyPage">
+            <div class="pageHeading">Time Table</div>
+            <!--Class Detail-->
+            <div class="tableOne">
+                <table name="classTime" cellspacing="0">
+                    <tr class="tableHeadingRow">
+                        <th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>01:45-02:30</td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3a09b0853784f24bcc9a1c73c0a6760d64%40thread.tacv2/1628484469433?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%22a9aa3542-90db-41ee-b5cd-a8b1f45d1cb3%22%7d">Storage</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628495023776?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%228f088edb-6b45-4573-898a-a6a907e3c688%22%7d">AI</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628237062445?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2204d7e6a4-5d5e-4e5b-8800-5743590b367a%22%7d">Distributed</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3a09b0853784f24bcc9a1c73c0a6760d64%40thread.tacv2/1628145248279?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%226441b9ac-38ab-48c5-bc5f-32120aad57fb%22%7d">Cyber Security</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3a09b0853784f24bcc9a1c73c0a6760d64%40thread.tacv2/1628145296330?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%226441b9ac-38ab-48c5-bc5f-32120aad57fb%22%7d">Cyber Security</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3a09b0853784f24bcc9a1c73c0a6760d64%40thread.tacv2/1628145342843?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%226441b9ac-38ab-48c5-bc5f-32120aad57fb%22%7d">Cyber Security</a>
+                        </td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>02:30-03:15</td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628494760873?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%228f088edb-6b45-4573-898a-a6a907e3c688%22%7d">AI</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3a09b0853784f24bcc9a1c73c0a6760d64%40thread.tacv2/1628571715957?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%22a9aa3542-90db-41ee-b5cd-a8b1f45d1cb3%22%7d">Storage</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3a09b0853784f24bcc9a1c73c0a6760d64%40thread.tacv2/1628670335090?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%22a9aa3542-90db-41ee-b5cd-a8b1f45d1cb3%22%7d">Storage(T)</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628499469834?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%228f088edb-6b45-4573-898a-a6a907e3c688%22%7d">AI</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628499525240?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%228f088edb-6b45-4573-898a-a6a907e3c688%22%7d">AI(T)</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628247001296?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%221fcd4fd4-64c8-4053-8c63-6a6029afb20f%22%7d">Graphics</a>
+                        </td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>03:15-04:00</td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628236795387?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2204d7e6a4-5d5e-4e5b-8800-5743590b367a%22%7d">Distributed</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628236865858?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2204d7e6a4-5d5e-4e5b-8800-5743590b367a%22%7d">Distributed</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628240494831?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%221fcd4fd4-64c8-4053-8c63-6a6029afb20f%22%7d">Graphics</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628246833325?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%221fcd4fd4-64c8-4053-8c63-6a6029afb20f%22%7d">Graphics</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628831246719?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2224a592f1-4a8e-4f53-86e2-f4c61a25aca4%22%7d">Python(L)</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628831387212?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2224a592f1-4a8e-4f53-86e2-f4c61a25aca4%22%7d">Cyber Security(L)</a>
+                        </td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>04:00-04:45</td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628246945742?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%221fcd4fd4-64c8-4053-8c63-6a6029afb20f%22%7d">Graphics(L)</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628485748196?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2276d2bf76-99ac-4e9f-b399-41fbaba3053b%22%7d">Scripting(L)</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1598437315915?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%22008680e8-17de-4952-a67c-1c1882063fee%22%7d">AI(L)</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1629280411842?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2224a592f1-4a8e-4f53-86e2-f4c61a25aca4%22%7d">Python(L)</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628486013792?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2276d2bf76-99ac-4e9f-b399-41fbaba3053b%22%7d">Scripting(L)</a>
+                        </td>
+                        <td>
+                            <a href="https://teams.microsoft.com/l/meetup-join/19%3aafef0206a30246d8bca329a104f37539%40thread.tacv2/1628237959749?context=%7b%22Tid%22%3a%22783ff96b-fe13-406b-b48d-45dc1853cbad%22%2c%22Oid%22%3a%2204d7e6a4-5d5e-4e5b-8800-5743590b367a%22%7d">Distributed(L)</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--Subject Detail-->
+            <div class="pageSubHeading">Subject Info.</div>
+            <div class="tableTwo">
+                <table name="subjectDetail"  cellspacing="0">
+                    <tr class="tableHeadingRow">
+                        <th>Subject Code</th><th>Subject Name</th><th>Teacher Name</th><th>Email</th><th>Number</th>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>BTCS511</td><td>Artificial Intelligence</td><td>Prof. Rani Singh</td>
+                        <td><a href="mailto:ranisingh@svvv.edu.in">ranisingh@svvv.edu.in</a></td>
+                        <td><a href="tel:">none</a></td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>BTIT713</td><td>Distributed</td><td>Prof. Richa Jain</td>
+                        <td><a href="mailto:it.richajain@gmail.com">it.richajain@gmail.com</a></td>
+                        <td><a href="tel:+919479612460">+919479612460</a></td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>BTCS503</td><td>Computer Graphics And Multimedia</td><td>Prof. Isha Chopra</td>
+                        <td><a href="mailto:ishachopra@svvv.edu.in">ishachopra@svvv.edu.in</a></td>
+                        <td><a href="tel:+919617590548">+919617590548</a></td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>BTIT603</td><td>Cyber And Network Security</td><td>Dr. Jigyasu Dubey</td>
+                        <td><a href="mailto:jigyasudube@yahoo.co.in">jigyasudube@yahoo.co.in</a></td>
+                        <td><a href="tel:">None</a></td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>BTIT603</td><td>Cyber And Network Security</td><td>Prof. Jitendra Sharma</td>
+                        <td><a href="mailto:js5052013@gmail.com">js5052013@gmail.com</a></td>
+                        <td><a href="tel:">None</a></td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>BTIT611</td><td>Information Storage And Mang.</td><td>Prof. Chetan Verma</td>
+                        <td><a href="mailto:email@address.com">chetanverma@svvv.edu.in</a></td>
+                        <td><a href="tel:+919755753758">+919755753758</a></td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>BTCS407</td><td>Programming with Python</td><td>Prof. Abhishek Kori</td>
+                        <td><a href="mailto:email@address.com">abhishekkori@svvv.edu.in</a></td>
+                        <td><a href="tel:+919993293219">+919993293219</a></td>
+                    </tr>
+                    <tr class="tableRow">
+                        <td>BTCS607</td><td>Scripting Languages</td><td>Prof.Sumit Nigam</td>
+                        <td><a href="mailto:email@address.com">nigam.sumit.@svvv.edu.in</a></td>
+                        <td><a href="tel:+919893064527">+919893064527</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!--End--><!--Time Table-->
+
+        <!--Start--><!--Notes-->
+        <section data-index="3" id="notes" class="notes mainPages unSelectable keyPage">
+            <div class="pageHeading">Notes</div>
+            <div class="allCards">
+                <a href="https://mega.nz/folder/dGI2zZhI#vo1Wxsj1HJr3rxxeedo8kQ">
+                    <div class="card">
+                        <p class="cardHeading">AI</p>
+                        <p class="cardDescription">AI stands for Artificial Intelligence. In this subject we learn about AI.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/paJEXBqS#qusd31eMyiDsGYWql_SkfA">
+                    <div class="card">
+                        <p class="cardHeading">Distributed</p>
+                        <p class="cardDescription">Distributed System is the subject based on many computer connected by network. By Richa Jain.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/QHBEyL5K#Fp-lrvXGPJbU5BuYHJ-PDA">
+                    <div class="card">
+                        <p class="cardHeading">Graphics</p>
+                        <p class="cardDescription">Computer Graphics And Multimedia is the suject in which we learn about graphics and multimedia. By Isha Chopra.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/dPYgHLpD#5GBPzSm8srNVRNSW63TaMg">
+                    <div class="card">
+                        <p class="cardHeading">Cyber Security</p>
+                        <p class="cardDescription">Cyber And Network Security is the subject in which we learn about ethics and cyber crime and security from it.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/FSBAXRaZ#fvn16wPlex8qEbRhOt6LZA">
+                    <div class="card">
+                        <p class="cardHeading">Storage</p>
+                        <p class="cardDescription">Information Storage And Management in this subject we learn about how information stored and managed in network and computer.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/0aAkCLYA#7oKRFb0rgtmXN-rTTbVk5g">
+                    <div class="card">
+                        <p class="cardHeading">Python</p>
+                        <p class="cardDescription">Programming with Python in this subject we learn python programming its concept. By Abhishek Kori</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/wGZmHT6Z#Ar_yKORS-2dthJo8Qjquug">
+                    <div class="card">
+                        <p class="cardHeading">Scripting</p>
+                        <p class="cardDescription">In Scripting Languages subject we learn about many types Scripting Languages with where and how to use it. By Sumit Nigam</script></p>
+                    </div>
+                </a>
+            </div>
+            <a href="https://svvv.edu.in/Department/SyllabusInformation%20Technology/Syllabus-SVIIT-IT-BTech(IT)-V-2018-19_21.12.2020.pdf" class="webBtn"><p>Syllabus</p></a>
+        </section>
+        <!--End--><!--Notes-->
+        <!--Start--><!--Notes-->
+        <section data-index="4" id="assignment" class="assignment mainPages unSelectable keyPage">
+            <div class="pageHeading">Assignment</div>
+            <div class="allCards">
+                <a href="https://mega.nz/folder/RKRyUDwR#j-Og9WzSzzmlOrjwjxI7cw">
+                    <div class="card">
+                        <p class="cardHeading">AI</p>
+                        <p class="cardDescription">AI stands for Artificial Intelligence. In this subject we learn about AI.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/QfB0ATBZ#wGhtWJU_0qUaH31z62CSXg">
+                    <div class="card">
+                        <p class="cardHeading">Distributed</p>
+                        <p class="cardDescription">Distributed System is the subject based on many computer connected by network. By Richa Jain.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/wGJkgJ7C#fqO8gyrk4DSJZODxbTYg3w">
+                    <div class="card">
+                        <p class="cardHeading">Graphics</p>
+                        <p class="cardDescription">Computer Graphics And Multimedia is the suject in which we learn about graphics and multimedia. By Isha Chopra.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/4SAATBSb#mzzWHIDMl7IWlKPufoMpNQ">
+                    <div class="card">
+                        <p class="cardHeading">Cyber Security</p>
+                        <p class="cardDescription">Cyber And Network Security is the subject in which we learn about ethics and cyber crime and security from it.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/tKQ0WZ5C#bTHUMF0O8r1eHd-W9_WCTQ">
+                    <div class="card">
+                        <p class="cardHeading">Storage</p>
+                        <p class="cardDescription">Information Storage And Management in this subject we learn about how information stored and managed in network and computer.</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/lTImXZ5S#WrpYNcXvrVURNYRt_JbcfA">
+                    <div class="card">
+                        <p class="cardHeading">Python</p>
+                        <p class="cardDescription">Programming with Python in this subject we learn python programming its concept. By Abhishek Kori</p>
+                    </div>
+                </a>
+                <a href="https://mega.nz/folder/JCJgmJBZ#CLU2CArgN2tJWqzhBXCVig">
+                    <div class="card">
+                        <p class="cardHeading">Scripting</p>
+                        <p class="cardDescription">In Scripting Languages subject we learn about many types Scripting Languages with where and how to use it. By Sumit Nigam</script></p>
+                    </div>
+                </a>
+            </div>
+            <a href="" class="webBtn"><p>Sample Paper</p></a>
+        </section>
+        <!--End--><!--Notes-->
+        <!--Start--><!--Tutorial-->
+        <section data-index="5" id="tutorial" class="tutorial mainPages unSelectable keyPage">
+            <div class="pageHeading">Tutorials</div>
+            <div class="allCards">
+                <div class="tutCard">
+                    <p class="cardHeading">AI</p>
+                    <ul class="tut_ul">
+                        <li class="tut_link"><a href="https://www.javatpoint.com/artificial-intelligence-tutorial">Tutorial1</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/machine-learning">Tutorial2</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/deep-learning">Tutorial3</a></li>
+                        <li class="tut_link"><a href="https://www.tutorialspoint.com/artificial_intelligence/index.htm">Tutorial4</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PL9ooVrP1hQOGHNaCT7_fwe9AabjZI1RjI">Tutorial5</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLxCzCOWd7aiHGhOHV-nwb0HR5US5GFKFI">Tutorial6</a></li>
+                        <li class="tut_link"><a href="https://www.geeksforgeeks.org/fundamentals-of-algorithms/">Tutorial7</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/reinforcement-learning">Tutorial8</a></li>
+                    </ul>
+                </div>
+                <div class="tutCard">
+                    <p class="cardHeading">Distributed</p>
+                    <ul class="tut_ul">
+                        <li class="tut_link"><a href="https://www.tutorialspoint.com/Distributed-Systems">Tutorial1</a></li>
+                        <li class="tut_link"><a href="https://www.ejbtutorial.com/distributed-systems/introduction-to-distributed-systems">Tutorial2</a></li>
+                        <li class="tut_link"><a href="https://www.google.com/amp/s/www.freecodecamp.org/news/a-thorough-introduction-to-distributed-systems-3b91562c9b3c/amp/">Tutorial3</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PL0s3O6GgLL5eEC3Ej6odS3TugjgdsYOr9">Tutorial4</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLrjkTql3jnm9FEOXHA_qjR-TMODlaIk-W">Tutorial5</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLrjkTql3jnm9FEOXHA_qjR-TMODlaIk-W">Tutorial6</a></li>
+                    </ul>
+                </div>
+                <div class="tutCard">
+                    <p class="cardHeading">Graphics</p>
+                    <ul class="tut_ul">
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLL8qj6F8dGlScni_9ZmeOMoRodrwzhvTq">Tutorial1</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLrjkTql3jnm9cY0ijEyr2fPdwnH-0t8EY">Tutorial2</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLWPirh4EWFpHukXICQrDcmjZUa2WlLMAb">Tutorial3</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLJIH7wkUEF5YeX_kggNX7bMLNhLlSivAm">Tutorial4</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/computer-graphics-tutorial">Tutorial5</a></li>
+                    </ul>
+                </div>
+                <div class="tutCard">
+                    <p class="cardHeading">Cyber Security</p>
+                    <ul class="tut_ul">
+                        <li class="tut_link"><a href="https://www.javatpoint.com/cyber-security-tutorial">Tutorial1</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/computer-network-security">Tutorial2</a></li>
+                        <li class="tut_link"><a href="https://www.w3schools.in/cyber-security/">Tutorial3</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PL-JvKqQx2AteIbm-z4X709scVr9OaHpIY">Tutorial4</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PL9ooVrP1hQOGPQVeapGsJCktzIO4DtI4_">Tutorial5</a></li>
+                        <li class="tut_link"><a href="https://youtu.be/dz7Ntp7KQGA">Tutorial6</a></li>
+                    </ul>
+                </div>
+                <div class="tutCard">
+                    <p class="cardHeading">Storage</p>
+                    <ul class="tut_ul">
+                        <li class="tut_link"><a href="https://www.tutorialspoint.com/management_information_system/index.htm">Tutorial1</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLe9wupcNUcNyrOkHgj-20dHUr3FrcAT2s">Tutorial2</a></li>
+                    </ul>
+                </div>
+                <div class="tutCard">
+                    <p class="cardHeading">Python</p>
+                    <ul class="tut_ul">
+                        <li class="tut_link"><a href="https://youtu.be/gfDE2a7MKjA">Tutorial1</a></li>
+                        <li class="tut_link"><a href="https://www.w3schools.com/python/">Tutorial2</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/python-tutorial">Tutorial3</a></li>
+                        <li class="tut_link"><a href="https://www.tutorialspoint.com/python/index.htm">Tutorial4</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME">Tutorial5</a></li>
+                        <li class="tut_link"><a href="https://youtu.be/WGJJIrtnfpk">Tutorial6</a></li>
+                    </ul>
+                </div>
+                <div class="tutCard">
+                    <p class="cardHeading">Scripting</p>
+                    <ul class="tut_ul">
+                        <li class="tut_link"><a href="https://www.tutorialspoint.com/scripting_lnaguage_tutorials.htm">Tutorial1</a></li>
+                        <li class="tut_link"><a href="https://www.w3schools.com/php/">Tutorial2</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/perl-tutorial">Tutorial3</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/php-tutorial">Tutorial4</a></li>
+                        <li class="tut_link"><a href="https://www.javatpoint.com/angularjs-tutorial">Tutorial5</a></li>
+                        <li class="tut_link"><a href="https://www.w3schools.com/angular/">Tutorial6</a></li>
+                        <li class="tut_link"><a href="https://youtube.com/playlist?list=PLu0W_9lII9aikXkRE0WxDt1vozo3hnmtR">Tutorial7</a></li>
+                        <li class="tut_link"><a href="https://youtu.be/0LhBvp8qpro">Tutorial8</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--End--><!--Tutorial-->
+        <!--Footer-->
+        <footer class="footer">
+            <p>All Copyrights of this site is reserved by the Developer.</p>
+        </footer>
+        <!--Footer-->
+    </div>
+
+    <script src="./javascript.js"></script>
+</body>
+</html>
